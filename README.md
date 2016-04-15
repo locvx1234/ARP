@@ -48,8 +48,21 @@ Khi A cần truyền thông với B, chỉ cần đưa MAC của B vào trườn
 | Target Hardware Address | Địa chỉ MAC máy nhận |
 | Target Protocol Address | Địa chỉ IP máy nhận |
 
+## 7. Sử dụng Wireshark bắt gói tin ARP
 
-## 5. Tham khảo
+- Bật Wireshark để bắt gói tin 
+- ping tới một IP trong mạng LAN
+- Stop việc bắt gói tin và lọc theo giá trị trong ô `filter` là `arp`
+
+Thông điệp ARP request được gửi đi. Hãy nói cho `192.168.0.5` biết địa chỉ MAC của `192.168.0.3`
+
+<img scr="http://i.imgur.com/8GlvYeJ.png">
+
+Thông điệp ARP repply được trả về. Máy mà IP là `192.168.0.3` thì có địa chỉ MAC là `40:8d:5c:4b:8b:af`
+
+<img scr="http://i.imgur.com/98laIKy.png">
+
+## 6. Tham khảo
 
 Book : Computer Networking A Top-Down Approach 6th-edition - Kurose Ross.
 
